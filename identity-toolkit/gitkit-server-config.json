@@ -1,0 +1,7 @@
+{
+  "clientId": "202994023082-i5279fvm2feoa85qrnjitraciuhmv183.apps.googleusercontent.com",
+  "serviceAccountEmail": "202994023082-bsfvekfksdt31omqg7db3h0553m3245o@developer.gserviceaccount.com",
+  "serviceAccountPrivateKeyFile": "c:\\keys\\babyfacebook-168b4cdc06f6.p12",
+  "widgetUrl": "http://localhost/identity-toolkit/gitkit.php",
+  "cookieName": "gtoken"
+}
