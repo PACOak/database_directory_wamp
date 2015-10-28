@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    return 'Hello World!';
+    return view('welcome');
 });
 
 Route::get('/newpage', function() {
@@ -33,5 +33,13 @@ Route::get('/shoes',function() {
 });
 
 Route::get('/newpage3',function() {
-    return view('newpage3',['name' => 'paco']);
+    return view('newpage3',['name' => 'kaehler']);
+});
+Route::get('/oldrelease', function () {
+    //return view('welcome');
+    return view('oldrelease');
+});
+Route::get('/newrelease', function () {
+    //return view('welcome');
+    return view('newrelease');
 });
