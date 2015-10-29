@@ -13,8 +13,16 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    return view('welcome');
+    return redirect('/blog');
 });
+
+get('blog','BlogController@index');
+get('blog/{slug}','BlogController@showPost');
+
+
+
+
+
 
 Route::get('/newpage', function() {
     return 'Content for new page';
