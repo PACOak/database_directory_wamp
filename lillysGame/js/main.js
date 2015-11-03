@@ -4,7 +4,7 @@
 //};
 
 $(document).ready(function() {
-  $("body").click(function() {
+  $("html").click(function() {
     $(".p").css("background-color", colorChange());
   });
 });
