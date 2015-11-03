@@ -3,7 +3,11 @@
   //document.getElementsByClassName("p").style.background = "green";
 //};
 
-
+$(document).ready(function() {
+  $("body").click(function() {
+    $(".p").css("background-color", colorChange());
+  });
+});
 
 function colorChange() {
 	var char1 = fixLetters(Math.floor(Math.random() * 16));
