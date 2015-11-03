@@ -1,0 +1,50 @@
+body {
+  overflow: hidden;
+  background: #25363d;
+}
+
+.stars-first,
+.dots,
+.stars-second {
+  width: 600px;
+  height: 550px;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+
+.stars-first {
+  background: url(http://s.cdpn.io/15836/stars_1.png) no-repeat center center;
+  z-index: 5;
+  animation: stars 4s ease-in-out infinite alternate;
+}
+
+.dots {
+  background: url(http://s.cdpn.io/15836/dots-first.png) no-repeat center center;
+  z-index: 2;
+  animation: dots 5s ease-in-out infinite alternate;
+}
+
+.stars-second {
+  background: url(http://s.cdpn.io/15836/stars-second.png) no-repeat center center;
+  z-index: 2;
+  animation: stars 3s ease-in-out infinite alternate;
+}
+
+@keyframes dots {
+  0% {
+    transform: translatey(-50px);
+  }
+  100% {
+    transform: translatey(50px);
+  }
+}
+
+@keyframes stars {
+  0% {
+    transform: translatey(-25px);
+  }
+  100% {
+    transform: translatey(25px);
+  }
+}
