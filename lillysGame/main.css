@@ -6,15 +6,64 @@
   animation-timing-function: ease-in-out;
 }
 
-.pics {
-  width: 19%;
-  position: relative;
-  top: 50%;
-}
+
 #target1 {
   width: 20%;
   position: absolute;
   left: 75%;
+}
+.img {
+  position: relative;
+  top: 50%;
+}
+.shapes {
+  position: absolute;
+  width: 19%;
+}
+.numbers {
+  padding-top: 3.3%;
+  position:absolute;
+  z-index: 1;
+}
+#number1 {
+  width: 6%;
+  top: 0%;
+  left:6.3%;
+}
+#number2 {
+  width: 8%;
+  top: 58%;
+  left:24.5%;
+}
+#number3 {
+  width: 8%;
+  top: 58%;
+  left:43.8%;
+}
+#number4 {
+  width: 9.3%;
+  top: 58%;
+  left:61.8%;
+}
+#number5 {
+  width: 8.4%;
+  top: 58%;
+  left:82.3%;
+}
+#shape1 {
+  top: 58%;
+}
+#shape2 {
+  left: 18.8%;
+}
+#shape3 {
+  left: 38.5%;
+}
+#shape4 {
+  left: 57.3%;
+}
+#shape5 {
+  left: 76.7%;
 }
 
 

@@ -3,11 +3,6 @@ $(document).ready(function() {
     $(".p").css("background-color", colorChange());
   });
 
-	//$("#test").playKeyframe({
-  //  name: 'myfirst',
-  //  duration: 2000
-	//});
-
 	$("#pinWheel").click(function() {
 		if ($(this).css("animation-name") == "rotate") {
 			$(this).css("animation-name", "rotate-reverse");
@@ -27,36 +22,51 @@ $(document).ready(function() {
 		}
 	});
 
-	$("#shape1").click(function() {
+	$(".shapes").click(function() {
 		var shape = shapeChange();
 		var color = shapeColorChange();
 		$(this).attr("src", shape + color);
 	});
-
-	$("#shape2").click(function() {
-		var shape = shapeChange();
-		var color = shapeColorChange();
-		$(this).attr("src", shape + color);
-	});
-
-	$("#shape3").click(function() {
-		var shape = shapeChange();
-		var color = shapeColorChange();
-		$(this).attr("src", shape + color);
-	});
-
-	$("#shape4").click(function() {
-		var shape = shapeChange();
-		var color = shapeColorChange();
-		$(this).attr("src", shape + color);
-	});
-
-	$("#shape5").click(function() {
-		var shape = shapeChange();
-		var color = shapeColorChange();
-		$(this).attr("src", shape + color);
+	$(".numbers").click(function() {
+		var number = numberChange();
+		$(this).attr("src", number);
 	});
 });
+
+function numberChange() {
+	var num = pickNum(Math.floor(Math.random() * 5));
+	function pickNum(numVar) {
+		var numNum;
+		switch(numVar) {
+			case 0: {
+				numNum = "img/numbers/comicSans/1.png";
+				break;
+			}
+			case 1: {
+				numNum = "img/numbers/comicSans/2.png";
+				break;
+			}
+			case 2: {
+				numNum = "img/numbers/comicSans/3.png";
+				break;
+			}
+			case 3: {
+				numNum = "img/numbers/comicSans/4.png";
+				break;
+			}
+			case 4:{
+				numNum = "img/numbers/comicSans/5.png";
+				break;
+			}
+			default: {
+				alert("Error number switch");
+				break;
+			}
+		}
+		return numNum;
+	}
+	return num;
+}
 
 function shapeChange() {
 	var shape = pickShape(Math.floor(Math.random() * 5));
