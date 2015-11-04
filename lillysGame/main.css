@@ -1,5 +1,38 @@
-#pic {
-  
+@keyframes slider {
+    from {left: 0%;}
+    to {left: 50%;}
+}
+#slider {
+  animation-timing-function: ease-in-out;
+}
+
+.pics {
+  width: 19%;
+  position: relative;
+  top: 50%;
+}
+#target1 {
+  width: 20%;
+  position: absolute;
+  left: 75%;
+}
+
+
+
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+@keyframes rotate-reverse {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+#pinWheel {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 18%;
+  position: absolute;
 }
 
 *, *:before, *:after {
@@ -13,6 +46,8 @@
 
 html {
   box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
 }
 
 * {

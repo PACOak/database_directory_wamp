@@ -18,8 +18,9 @@ Route::get('/', function () {
 
 get('blog','BlogController@index');
 get('blog/{slug}','BlogController@showPost');
-
-
+get('newroute','BlogController@sayHello');
+get('newroute2','BlogController@showFirstPost');
+get('photos','BlogController@showPostImages');
 
 
 

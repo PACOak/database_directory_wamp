@@ -22,5 +22,19 @@ class BlogController extends Controller
 
       return view('blog.post')->withPost($post);
   }
+  public function sayHello()
+  {
+      return "blah blah blah";
+  }
+  public function showFirstPost()
+  {
+      $post = Post::orderBy('id','desc')->first();
+      return view('blog.newview')->withPost($post);
+  }
+  public function showPostImages()
+  {
+      $posts = Post::all();
+      return view('blog.images', compact('posts'));
+  }
 }
 ?>
