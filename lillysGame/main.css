@@ -93,12 +93,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-}
-
 * {
   box-sizing: inherit;
 }
@@ -108,6 +102,8 @@ html {
 
 html {
   font-size: 10px;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
 }
 
 body {
