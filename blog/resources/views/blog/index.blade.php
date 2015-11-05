@@ -5,6 +5,13 @@
         rel="stylesheet">
 </head>
 <body>
+
+  @if(Auth::check())
+    Hello {{ Auth::user()->name }}! | <a href="auth/logout">Logout</a>
+  @else
+    <a href="auth/login">Login</a> | <a href="auth/register">Register</a>
+  @endif
+
   <div class="container">
     <h1>{{ config('blog.title') }}</h1>
     <h5>Page {{ $posts->currentPage() }} of {{ $posts->lastPage() }}</h5>

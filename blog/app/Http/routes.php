@@ -16,11 +16,31 @@ Route::get('/', function () {
     return redirect('/blog');
 });
 
+
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
 get('blog','BlogController@index');
 get('blog/{slug}','BlogController@showPost');
 get('newroute','BlogController@sayHello');
 get('newroute2','BlogController@showFirstPost');
 get('photos','BlogController@showPostImages');
+
+
+
+
+Route::get('home', function() {
+  return 'Logged In';
+});
+
+
 
 
 
@@ -37,11 +57,11 @@ Route::get('/user/{id}', function($id) {
     return 'You want to update user ' . $id;
 });
 
-Route::get('/shoes',function() {
-    return '<img src="http://skate.boardnews.pl/wp-content/uploads/2014/02/low-second.jpg"/>';
-});
+Route::get('/shoes', ['middleware' => 'auth', function() {
+    return '<img src="http://timpfest.org/wp-content/uploads/2013/09/Converse-Shoes.jpg"/>';
+}]);
 
-Route::get('/newpage3',function() {
+Route::get('/newpage3', function() {
     return view('newpage3',['name' => 'kaehler']);
 });
 Route::get('/oldrelease', function () {
