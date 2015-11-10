@@ -1,12 +1,3 @@
-@keyframes slider {
-    from {left: 0%;}
-    to {left: 50%;}
-}
-#slider {
-  animation-timing-function: ease-in-out;
-}
-
-
 #target1 {
   width: 20%;
   position: absolute;
@@ -65,7 +56,6 @@
 #shape5 {
   left: 76.7%;
 }
-
 
 
 @keyframes rotate {

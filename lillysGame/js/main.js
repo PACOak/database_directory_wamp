@@ -3,6 +3,8 @@ $(document).ready(function() {
     $(".p").css("background-color", colorChange());
   });
 
+
+	//PINWHEEL FUNCTION
 	$("#pinWheel").click(function() {
 		if ($(this).css("animation-name") == "rotate") {
 			$(this).css("animation-name", "rotate-reverse");
@@ -12,6 +14,15 @@ $(document).ready(function() {
 		}
 	});
 
+
+	//SLIDER FUNCTIONS #####MODIFY#####
+
+
+
+
+
+
+	//TARGET FUNCTION
 	$("#target1").click(function() {
 		var target1 = $(this).attr("src");
 		if (target1 === "img/randomShapes/target1.png") {
@@ -22,6 +33,8 @@ $(document).ready(function() {
 		}
 	});
 
+
+	//SHAPES AND NUMBERS CLICK FUNCTIONS ######FIX###### TO MAKE IT DO BOTH
 	$(".shapes").click(function() {
 		var shape = shapeChange();
 		var color = shapeColorChange();
@@ -33,6 +46,9 @@ $(document).ready(function() {
 	});
 });
 
+
+
+//CHANGING NUMBERS FUNCTION
 function numberChange() {
 	var num = pickNum(Math.floor(Math.random() * 5));
 	function pickNum(numVar) {
@@ -68,6 +84,8 @@ function numberChange() {
 	return num;
 }
 
+
+//CHANGING SHAPE FUNCTION
 function shapeChange() {
 	var shape = pickShape(Math.floor(Math.random() * 5));
 	function pickShape(shapeVar) {
@@ -104,6 +122,8 @@ function shapeChange() {
 	return shapeString;
 };
 
+
+//SHAPE COLOR CHANGE FUNCTION
 function shapeColorChange() {
 
 	var color = pickColor(Math.floor(Math.random() * 7));
@@ -150,6 +170,8 @@ function shapeColorChange() {
 	return colorString;
 };
 
+
+//COLOR CHANGE FUNCTION
 function colorChange() {
 	var char1 = fixLetters(Math.floor(Math.random() * 16));
 	var char2 = fixLetters(Math.floor(Math.random() * 16));
